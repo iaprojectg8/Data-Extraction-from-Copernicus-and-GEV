@@ -1,0 +1,13 @@
+cdsapi
+folium
+streamlit-folium
+xarray
+cfgrib
+ecmwflibs
+pandas
+streamlit
+netcdf4
+scipy
+plotly
+scikit-learn
+pyextremes

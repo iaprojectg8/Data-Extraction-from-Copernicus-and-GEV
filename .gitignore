@@ -1,0 +1,6 @@
+appenv
+csv_results
+data_extracted
+__pycache__
+.vscode
+
