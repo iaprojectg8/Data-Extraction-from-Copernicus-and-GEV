@@ -36,7 +36,7 @@ def aggregate_data_year(df, aggregation_method):
 def main():
 
     # Configure Streamlit options
-    st.set_option('client.caching', 'clear_on_every_run')
+    # st.set_option('client.caching', 'clear_on_every_run')
     # Define UI
     st.title("GEV")
 
@@ -80,7 +80,7 @@ def main():
 
 ############################################## Distribution on the time step chosen #################################################################
 
-    df = pd.read_csv("Max_Temp.csv",index_col=False)
+    df = pd.read_csv("csv_results/Max_Temp.csv",index_col=False)
 
     # First aggregation
     df_aggregated = aggregate_data(df,time_step,aggregation_method)
