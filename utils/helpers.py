@@ -23,12 +23,13 @@ def put_nc_in_csv(input_folder):
         file_path = os.path.join(input_folder, file)
         data = xr.open_dataset(file_path) 
         df = data.to_dataframe()
-        df = df.sort_values("time")
+        print(df)
+        df = df.sort_values("valid_time")
         concatenated_df = pd.concat([concatenated_df, df])
         
     # Write the concatenated DataFrame to a CSV file
     concatenated_df.reset_index(inplace=True)
-    return concatenated_df.to_csv(index=False)
+    return concatenated_df
 
 
 def put_grib_in_csv(input_folder):
@@ -61,7 +62,7 @@ def put_grib_in_csv(input_folder):
         
     # Write the concatenated DataFrame to a CSV file
     concatenated_df.reset_index(inplace=True)
-    return concatenated_df.to_csv(index=False)
+    return concatenated_df
 
 
 def put_zip_in_csv(input_folder):
@@ -108,4 +109,4 @@ def put_zip_in_csv(input_folder):
 
     # Write the concatenated DataFrame to a CSV file
     concatenated_df.reset_index(inplace=True)
-    return concatenated_df.to_csv(index=False)
+    return concatenated_df
