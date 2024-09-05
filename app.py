@@ -64,6 +64,7 @@ def main():
 
     # Create a sidebar for other elements
     st.sidebar.title("Request parameters")
+    st.title("Exraction App for Copernicus Data")
 
     # Temporary button to chose if the page is going to come
     st.sidebar.button("Page trigger",on_click=trigger_page)
